@@ -102,10 +102,15 @@
 		{
 		?>
 	    	<li>
-            	<div class="half"><img src="<?php echo base_url(); ?>images/tag-of-war.jpg" alt="tag of war"></div>
+            	<div class="half">
+				<img src="<?php echo base_url(); ?><?php echo $news->post_image; ?>" alt="tag of war"></div>
                 <div class="flex-caption">
                 	<h2><?php echo $news->title; ?> </h2>
-                    <h3><?php echo $news->date_created; ?></h3>
+                    <h3><?php 
+							$newdate=$news->date_created; 
+							echo date('l , F d  , Y', strtotime($newdate));
+						?>
+					</h3>
                     <p><?php echo $news->content; ?></p>
                 </div>
 	    	</li>
