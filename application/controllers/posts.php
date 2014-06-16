@@ -17,14 +17,14 @@ class Posts extends CI_Controller
 	}
 	
 	
-	// nEWS C
-
+	// News Index
 	function index() {
 
 		
 		$data['post'] = $this->posts_model->get_posts();
-		$data['page_location']='Dashboard';	
-		$data['content']='admin/post_index';
+		$data['page_location']='News';	
+		//$data['content']='admin/post_index'; 
+		$data['content']='admin/post_index.php';
 		$data['page_title']='SEP News ';
 		$data['page_sub_title']='School Engagement Program News Management';
 		$this->load->view('includes/template',$data);
@@ -51,10 +51,9 @@ class Posts extends CI_Controller
 		if ($this->form_validation->run() === FALSE)
 		{
 			$data['content']='admin/create_post';
-			//$this->load->view('admin/create');
-			$data['page_location']='Dashboard';	
-			$data['page_title']='SEP News ';
-			$data['page_sub_title']='School Engagement Program News Management';
+			$data['page_location']='News';	
+			$data['page_title']='News ';
+			$data['page_sub_title']='School Engagement Program News';
 			$this->load->view('includes/template',$data);
 		}
 		else
@@ -91,7 +90,8 @@ class Posts extends CI_Controller
 					}
 					else
 					{
-						echo $this->upload->display_errors();
+						$this->session->set_flashdata('posts_message', $this->upload->display_errors());
+						$image_path = 'uploads/news/';						
 					}
 		 
 				}
@@ -107,17 +107,14 @@ class Posts extends CI_Controller
 			}
 		
 			$this->posts_model->insert_post($data);
-			//$this->load->view('admin/create');
-			echo "Done";
-			redirect('posts/index');
+			$this->session->set_flashdata('posts_message', 'Article saved to database successfully');
+			redirect('/posts/index');
 		}
-		
-
 	}
 		
 
 	
-	function edit($postId){	
+	function edit(){	
 		
 		$postId=$this->uri->segment(3);
 		$data['post'] = $this->posts_model->get_posts_by_id($postId);
@@ -167,7 +164,7 @@ class Posts extends CI_Controller
 					}
 					else
 					{
-						echo $this->upload->display_errors();
+						$this->session->set_flashdata('posts_message', $this->upload->display_errors());	
 						$image_path=$this->input->post('news_image_old');
 					}
 		 
@@ -182,7 +179,7 @@ class Posts extends CI_Controller
 					'dept_id'=>$this->input->post('department_id')
 				);
 			}
-			$this->posts_model->update_post($this->uri->segment(3),$data);
+			$this->posts_model->update_post($this->input->post('id'),$data);
 			$data['content']='admin/post_index';
 			$data['post'] = $this->posts_model->get_posts();
 		}
