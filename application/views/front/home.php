@@ -29,13 +29,13 @@
 			<img src="<?php echo base_url(); ?>images/v.png"> 
 			</div>
 			
-        	<div class="circsmall"><img src="<?php echo base_url(); ?>images/chic.jpg" alt="chic"></div>
+        	<div class="circsmall"><img src="<?php echo base_url(); ?><?php echo $winner->image;  ?>" alt="chic"></div>
             <div class="circbig">
             	<h3><?php echo $winner->username;  ?></h3>
                 <h4><?php echo $winner->company;  ?></h4>
 					<?php echo $winner->description;  ?>
                 
-				<a href="#" class="viewprofile">View Profile</a>
+				<a href="#" class="viewprofile">View Profile</a> <!--A page for read more Link should be created --->
             </div>
             <div class="circsmaller">Quiz <br>Winner</div>
 		<?php 
