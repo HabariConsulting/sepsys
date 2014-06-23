@@ -859,6 +859,25 @@ class Auth extends CI_Controller {
 			$data['page_sub_title']='view set quiz';
 			$this->load->view('includes/template',$data);
 			}
+			
+			
+ /** List Users **********
+ *
+ *
+ *
+ * Author Vincent
+ *Email: Vincent Mwagiru Kamoni
+ *
+ *
+ *
+ ******************
+
+function get_quiz_winner();{
+	
+} 
+****/
+
+			
 //.-------------------------------------Eugene's Work--------------------------------------------------------------
 		function question()
 	{   

@@ -23,7 +23,6 @@ class Posts_model extends CI_Model
 		function get_posts_by_id($postId)
 		{
             $query = $this->db->get_where('posts', array('id' => $postId));
-			return $query->row_array();
 		}
  
         function insert_post($data){

@@ -37,10 +37,21 @@ class  Events_model extends CI_Model
 			return;
 		}	
 
+		
+		
 		public function get_events(){
 			$query=$this->db->get('events');
 			return $query->result();
 		}	
+		
+		public function get_latest_event(){
+			$sqll="SELECT *
+					FROM events
+					ORDER BY start_date DESC
+					LIMIT 1";
+			$query = $this->db->query($sqll);
+			return $query->result();	;
+		}
 
 		public function get_event_by_id($eventId){		
 			$query = $this->db->get_where('events', array('id' => $eventId));

@@ -14,6 +14,8 @@ class Front extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('posts_model');
+		$this->load->model('events_model');
+		$this->load->model('debate_participants');
 	}
 	
 	
@@ -21,6 +23,8 @@ class Front extends CI_Controller {
 	{
 		$data= array();
 		$data['posts'] = $this->posts_model->get_posts();
+		$data['awardwinner'] = $this->debate_participants->get_quiz_winner();
+		$data['sepevents'] = $this->events_model->get_latest_event();
 		$data['content']='front/home';
 		$this->load->view('front/includes/template',$data);
 	}
