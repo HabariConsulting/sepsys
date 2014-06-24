@@ -9,20 +9,10 @@ class About extends CI_Model
  
         }
  		
-		function get_about_pages()
+		function get_about_pages_by_pagemenu($pagemenu)
 		{
+			$this->db->where('page_menu_title',$pagemenu);
 			return $this->db->get('about_us')->result();
 		}	
-
-		function get_kemri_page()
-		{
-			return $this->db->get('about_us')->result();
-		}	
-
-		function get_kemriwelcometrust_page()
-		{
-			return $this->db->get('about_us')->result();
-		}			
 	
-		
 }

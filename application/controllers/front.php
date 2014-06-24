@@ -30,13 +30,38 @@ class Front extends CI_Controller {
 		$this->load->view('front/includes/template',$data);
 	}
 	
+	/*** About Us Page Menus ****/
+	
+	// About Us - Kemri Wellcome Trust
 	public function about_kwtrp()
 	{
 		$data= array();
-		$data['aboutcontent'] = $this->about->get_about_pages();
+		$pagemenu='KEMRI - Wellcome Trust Research Programme';
+		$data['aboutcontent'] = $this->about->get_about_pages_by_pagemenu($pagemenu);
 		$data['content']='front/about';
 		$this->load->view('front/includes/template-about',$data);
 	}
+	
+	//About Us- KEMRI
+	public function about_kemri()
+	{
+		$data= array();
+		$pagemenu='KEMRI';
+		$data['aboutcontent'] = $this->about->get_about_pages_by_pagemenu($pagemenu);
+		$data['content']='front/about';
+		$this->load->view('front/includes/template-about',$data);
+	}
+	// About Us - SEP
+	public function about_sep()
+	{
+		$data= array();
+		$pagemenu='SEP';
+		$data['aboutcontent'] = $this->about->get_about_pages_by_pagemenu($pagemenu);
+		$data['content']='front/about';
+		$this->load->view('front/includes/template-about',$data);
+	}
+	
+	
 	
 }
 

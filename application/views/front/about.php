@@ -1,8 +1,8 @@
 	<div class="tophead">
     	<h1>ABOUT US</h1>
-        <a href="http://localhost:8080/sepsys/index.php/front/about">KEMRI &ndash; Wellcome Trust Research Programme</a>
-        <a href="#">KEMRI </a>
-        <a href="#">Schools Engagement Programme</a>
+        <a href="<?php echo base_url(); ?>index.php/front/about_kwtrp">KEMRI &ndash; Wellcome Trust Research Programme</a>
+        <a href="<?php echo base_url(); ?>index.php/front/about_kemri">KEMRI </a>
+        <a href="<?php echo base_url(); ?>index.php/front/about_sep">Schools Engagement Programme</a>
     </div>
 <?php foreach($aboutcontent as $abcontent) 
 {
@@ -39,7 +39,7 @@
         </div>
         <div class="half floatright">
         	<div class="testimony">
-            	<div class="alltxt">&quot; <?php echo $abcontent->quote; ?>&quot; </div>
+            	<div class="alltxt"><?php echo $abcontent->quote; ?></div>
             </div>
         </div>
     </div>
