@@ -796,7 +796,7 @@ footer a {
 	float: left;
 	width: 10.5%;
 }
-footer a:hover, footer a.current { color:#3E9CDC;}
+.footer a:hover, .footer a.current { color:#3E9CDC;}
 
 .floatleft{float:left;} .floatright{float:right;}
 .rotate {
