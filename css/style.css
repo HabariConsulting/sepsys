@@ -74,6 +74,7 @@ body {
 	font-family: 'MyriadProRegular', Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
 	color: #FFFFFF;
+	background-color: #f2f2f2;
 }
 
 a, img {
@@ -144,6 +145,12 @@ img{width:100%;float:left;height:auto;}
 	float: left;
 	width: 100%;
 }
+.alltwo {
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+}
+
 .half, .halftwo {
 	width: 48%;
 }
@@ -152,9 +159,14 @@ img{width:100%;float:left;height:auto;}
 	width: 30%;
 }
 .fourth {
-	float: left;
+	float: right;
 	width: 67%;
 }
+.quater {
+	width: 20%;
+	margin-right: 2%;
+}
+
 
 
 .clearfix:before,
@@ -283,8 +295,6 @@ nav a:hover, nav a:active, nav a.current {
 	margin-top: -70px;
 	margin-left: 25%;
 }
-
-
 .scientist .txt {
 	float: left;
 	width: 30%;
@@ -302,30 +312,6 @@ nav a:hover, nav a:active, nav a.current {
 	width: 90%;
 	padding: 5%;
 }
-
-
-
-a.readmore {
-	background-image: url(../images/readmore.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	float: left;
-	height: 26px;
-	width: 178px;
-	color: #FFF;
-	text-align: center;
-	padding-top: 12px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-a.readmore:hover {
-	background-position: 0px -38px;
-}
-a.viewprofile {
-	color: #C04F31;
-	float: right;
-}
-a.viewprofile:hover {color: #BE3D80;}
 .circsmall {
 	float: left;
 	width: 100%;
@@ -418,6 +404,8 @@ a.viewprofile:hover {color: #BE3D80;}
 .heading {
 	width: 30%;
 	float: left;
+	position: relative;
+	z-index: 100;
 }
 
 .heading h1 {
@@ -430,7 +418,8 @@ a.viewprofile:hover {color: #BE3D80;}
 .heading img {
 	float: left;
 	height: auto;
-	width: 35%;
+	width: /*35%*/ 100%;
+	margin-bottom: 10px;
 }
 .eventsimg {
 	float: none;
@@ -488,10 +477,14 @@ a.viewprofile:hover {color: #BE3D80;}
 }
 .ttle {
 	float: left;
-	width: 10%;
+	width: 20%;
 }
 .ttle p{
-	border-radius: 50%;
+	padding-bottom: 35%;
+	padding-top: 30%;
+	-moz-border-radius: 75%;
+	-webkit-border-radius: 75%;
+	border-radius: 75%;
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding;
 	background-clip: padding-box;
@@ -501,28 +494,26 @@ a.viewprofile:hover {color: #BE3D80;}
 	background-color: #D7CFD8;
 	color: #333;
 	text-align: center;
-	position: relative;
-	z-index: 25;
-	padding-top: 20%;
-	padding-right: 5%;
-	padding-bottom: 20%;
-	padding-left: 5%;
+	margin-top: -25px;
 }
 .vido {
 	float: right;
-	width: 80%;
+	width: 70%;
 }
  .testimony{
-	width: 55%;
+	width: 65%;
 	height: 0;
-	padding-bottom: 65%;
+	padding-bottom: 75%;
 	-moz-border-radius: 75%;
 	-webkit-border-radius: 75%;
 	border-radius: 75%;
-	background: #4679BD;
 	padding-top: 10%;
 	padding-right: 10%;
 	padding-left: 10%;
+	background-color: #ECCAC1;
+	border: 7px solid #C04F31;
+	font-size: 1.1em;
+	color: #403731;
 }
 .circle-text {
     width:50%;
@@ -548,19 +539,264 @@ a.viewprofile:hover {color: #BE3D80;}
     color:white;
 }
 
-.footer{
+.abtimg img{
+	border-radius: 75%;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	float: left;
+	width: 75%;
+	border: 8px solid #A22F62;
+ }
+.fs {
+	margin: 5%;
+	float: left;
+	width: 90%;
+	color: #333;
+}
+.fs h1, .fs h2 {
+	color: #F08500;
+}
+.searchtop {
+	background-color: #DBC5AD;
+	background-image: url(../images/searchtop.gif);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	padding: 2%;
+	float: left;
+	width: 96%;
+}
+.styled-select select {
+	background: transparent;
+	width: 100%;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 34px;
+	-webkit-appearance: none;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+   }
+.styled-select {
+	width: 100%;
+	height: 34px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #FFF;
+	background-image: url(../images/down_arrow_select.png);
+	background-repeat: no-repeat;
+	background-position: right 1;
+	float: left;
+   }
+select option{height:50px;}
+.searchtop input {
+	float: left;
+	height: 35px;
+	width: 98%;
+	padding: 1%;
+}
+
+
+.pagination {
+	float: left;
+	width: 20%;
+}
+.career {
+	background-color: #00A0F4;
+	margin: 2%;
+	padding: 1%;
+	float: left;
+	width: 44%;
+	border-radius: 1%;
+}
+.career .pic {
+	float: left;
+	width: 30%;
+}
+.career .txt {
+	background-color: #E8DBCB;
+	width: 53%;
+	float: left;
+	padding: 5%;
+	margin-left: 5%;
+}
+.career .readmorethree {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+}
+.careerinside {
+	background-color: #00A0F4;;
+	padding: 1%;
+	float: left;
+	width: 98%;
+	border-radius: 1%;
+}
+.careertxt {
+	background-color: #E8DBCB;
+	width: 90%;
+	float: left;
+	padding: 4%;
+	margin: 2%;
+}
+
+.career .line, .careertxt .line {
+	margin-bottom: 15px;
+}
+.midimg {
+	float: left;
+	height: auto;
+	width: 70%;
+	margin-left: 15%;
+}
+.alltxt {
+	float: left;
+	width: 80%;
+	margin-top: 20%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	margin-left: 10%;
+}
+#tabs {
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+	position: relative;
+	height: auto;
+}
+
+.ui-tabs .ui-tabs-nav {
+	float: left;
+	width: 100%;
+	position: relative;
+	z-index: 100;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	margin-right: 10px;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+	float: left;
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #AF3A22;
+	text-align: center;
+	outline: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading a, .ui-tabs .ui-tabs-nav li a:hover {
+	cursor: pointer;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.ui-tabs .ui-tabs-nav li a, /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	color: #333;
+	width: 100%;
+	position: relative;
+	float: left;
+	margin-top: 20px;
+}
+.ui-tabs .ui-tabs-panel .txt{
+	float: left;
+	width: 94%;
+	line-height: 1.5em;
+	background-color: #E8DBCB;
+	padding: 3%;
+}
+.ui-tabs .ui-tabs-panel .txt .txt{
+	float: left;
+	width: 50%;
+	margin-left: 5%;
+}
+.ui-tabs .ui-tabs-panel h4{
+	font-size: 16px;
+	color: #FFF;
+	background-color: #83796F;
+	padding: 2%;
+	float: left;
+	width: 96%;
+}
+.fromyear {
+	font-size: 16px;
+	color: #FFF;
+	background-image: url(../images/years.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	float: left;
+	height: 90px;
+	width: 100px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.tabs-4 {
+	padding: 3%;
+}
+
+.form {
+	float: left;
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 5px;
+}
+.form label {
+	float: left;
+	width: 96%;
+	padding-right: 2%;
+	padding-left: 2%;
+	margin-bottom: 15px;
+}
+.form .input {
+	float: left;
+	width: 95%;
+	padding: 3px;
+	border: 1px solid #999;
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+ul.listone {
+	float: left;
+	width: 95%;
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+ul.listone li {
+	float: left;
+	width: 90%;
+	margin-bottom: 7px;
+	padding-left: 5%;
+	background-repeat: no-repeat;
+	background-position: 5px 7px;
+	background-image: url(../images/listone.png);
+	margin-left: 2%;
+}
+footer{
 	float: left;
 	width: 100%;
 	position: relative;
 	background-color: #302F2D;
+	margin-top: 30px;
 }
-.footer a {
+footer a {
 	color: #FFF;
 	padding: 1%;
 	float: left;
 	width: 10.5%;
 }
-.footer a:hover, .footer a.current { color:#3E9CDC;}
+footer a:hover, footer a.current { color:#3E9CDC;}
 
 .floatleft{float:left;} .floatright{float:right;}
 .rotate {
@@ -665,7 +901,13 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 		padding: 5%;
 	}
 	.flex-caption{width:100%; margin-top:10px;}
-	.footer {margin-top:30px;} .footer a{width:50%;}
+	footer {
+	margin-top: 30px;
+} 
+footer a{
+	width: 45%;
+	float: left;
+}
 	 .circbig{
 	border-radius: 0px;
 	float: left;
@@ -702,9 +944,10 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 		border-bottom: 1px solid #576979;
 		color:#fff;
 	}
-	.footer a{width:100%;}
+	footer a{width:90%;}
 }
 .bgwht{ background-color:#fff;}
+.bgblu{ background-color:##00A0F4;}
 .clrorg{color:#F08500;}
 .clrpurp{color:#A57A87;}
 .clrlblu{color:#6DB4CB;}
@@ -717,3 +960,59 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 	float: left;
 }
 .text-center{ text-align:center;}
+.fontsisteen{font-size:16px;}
+a.readmore {
+	background-image: url(../images/readmore.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	float: left;
+	height: 26px;
+	width: 178px;
+	color: #FFF;
+	text-align: center;
+	padding-top: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+a.readmore:hover {
+	background-position: 0px -38px;
+}
+a.readmoretwo {
+	background-image: url(../images/readmoretwo.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	float: right;
+	height: 26px;
+	width: 107px;
+	color: #FFF;
+	text-align: center;
+	padding-top: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+a.readmoretwo:hover {
+	background-position: 0px -38px;
+}
+a.readmorethree {
+	background-image: url(../images/readmorethree.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	float: right;
+	height: 26px;
+	width: 178px;
+	color: #FFF;
+	text-align: center;
+	padding-top: 12px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #fff;
+	margin-right: 20px;
+}
+a.readmorethree:hover {
+	background-position: 0px -38px;
+}
+a.viewprofile {
+	color: #C04F31;
+	float: right;
+}
+a.viewprofile:hover {color: #BE3D80;}

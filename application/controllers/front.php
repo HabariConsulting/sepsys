@@ -16,6 +16,7 @@ class Front extends CI_Controller {
 		$this->load->model('posts_model');
 		$this->load->model('events_model');
 		$this->load->model('debate_participants');
+		$this->load->model('about');
 	}
 	
 	
@@ -28,6 +29,15 @@ class Front extends CI_Controller {
 		$data['content']='front/home';
 		$this->load->view('front/includes/template',$data);
 	}
+	
+	public function about_kwtrp()
+	{
+		$data= array();
+		$data['aboutcontent'] = $this->about->get_about_pages();
+		$data['content']='front/about';
+		$this->load->view('front/includes/template-about',$data);
+	}
+	
 }
 
 /* End of file front.php */

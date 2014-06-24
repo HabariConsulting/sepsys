@@ -1,6 +1,5 @@
-<!--Close Div named Mukiria -->
 </div>
-<div class="footer">
+<footer>
 	<img src="<?php echo base_url(); ?>images/footer.jpg" alt="bg" id="bg">
     <div class="mukiria">
         <a href="index.html" class="current">Home</a>
@@ -12,6 +11,6 @@
         <a href="careers.html">Careers</a>
         <a href="contact-us.html">Contact Us</a>
     </div>
-</div>
+</footer>
 </body>
 </html>

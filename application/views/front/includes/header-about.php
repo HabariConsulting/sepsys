@@ -24,7 +24,7 @@
 </script>
 </head>
 <body>
-<img src="<?php echo base_url(); ?>images/bg.jpg" alt="bg" id="bg">
+<img src="<?php echo base_url(); ?>images/bg-about.jpg" alt="bg" id="bg">
 <div class="mukiria">
 <header>
 	<nav class="clearfix bgblue">
@@ -35,8 +35,8 @@
                 <li><a href="contacts.html">Contact Us</a></li>
             </div>
             <div class="mainmenu">
-                <li class="thirteen"><a href="index.html" class="current">Home</a></li>
-                <li class="thirteen"><a href="about-us.html">About Us </a></li>
+                <li class="thirteen"><a href="index.html">Home</a></li>
+                <li class="thirteen"><a href="about-us.html" class="current">About Us </a></li>
                 <li class="thirteen"><a href="competitions.html">Competitions</a></li>
                 <li class="thirteen"><a href="ask-a-scientist.html">Ask A Scientist</a></li>
                 <li class="twenty"><a href="science-education-resources.html">Science Education Resources</a></li>
