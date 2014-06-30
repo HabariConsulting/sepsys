@@ -16,12 +16,13 @@ class  Debate_participants extends CI_Model
 			parent::__construct();
 
 	}
-			
+		
+			// Pick Quiz Winner from Quiz Participants Table 
 	public function get_quiz_winner(){		
 		$sql="SELECT * FROM `users` u 
-		INNER JOIN `debate_participants` p 
-		ON u.`id`=p.`user_id` 
-		WHERE debate_points = (SELECT MAX(debate_points) FROM debate_participants)";
+				INNER JOIN `quiz_participants` q 
+				ON u.`id`=q.`user_id` 
+				WHERE score = (SELECT MAX(score) FROM quiz_participants)";
 		
 		$query = $this->db->query($sql);
 		
