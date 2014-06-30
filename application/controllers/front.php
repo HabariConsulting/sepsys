@@ -17,6 +17,7 @@ class Front extends CI_Controller {
 		$this->load->model('events_model');
 		$this->load->model('debate_participants');
 		$this->load->model('about');
+		$this->load->model('staff_model');
 	}
 	
 	
@@ -61,6 +62,13 @@ class Front extends CI_Controller {
 		$this->load->view('front/includes/template-about',$data);
 	}
 	
+	public function meet_the_staff()
+	{
+		$data= array();
+		$data['stafflist'] = $this->staff_model->get_staff();
+		$data['content']='front/meet_staff_outer';
+		$this->load->view('front/includes/template',$data);
+	}
 	
 	
 }
