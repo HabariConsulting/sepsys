@@ -18,9 +18,6 @@ class Front extends CI_Controller {
 		$this->load->model('debate_participants');
 		$this->load->model('about');
 		$this->load->model('staff_model');
-		$this->load->model('people_model');
-		$this->load->model('sep_departments_model');
-
 	}
 	
 	
@@ -68,46 +65,10 @@ class Front extends CI_Controller {
 	public function meet_the_staff()
 	{
 		$data= array();
+		$data['stafflist'] = $this->staff_model->get_staff();
 		$data['content']='front/meet_staff_outer';
-        $data['people'] = $this->people_model->get_all_people();
 		$this->load->view('front/includes/template',$data);
 	}
-	
-    function health_research_careers() {
-		$data= array();
-		$data['content']='front/careers_in_health';
-        $data['careers'] = $this->sep_departments_model->get_departments();
-		$this->load->view('front/includes/template',$data);
-    }	
-	
-	
-  /*  function people() {
-		
-		$data= array();
-		$data['content']='front/meet_staff_outer';
-        $data['people'] = $this->people_model->get_all_people();
-		$this->load->view('front/includes/template',$data);
-    }	*/
-	
-	function staff_profile($id) {
-        $profile = $this->people_model->get_person($id)->result();
-        if(sizeof($profile)>0){
-            if($profile[0]->profiled != '1'){
-                //redirect to people landing
-                redirect('front/people');
-            }
-        }else{
-            redirect('front/people');
-        }
-        $data['title'] = 'People Profile';
-        $data['people'] = $this->people_model->get_person($id);
-        $data['study'] = $this->people_model->get_study($id);
-        $data['study2'] = $this->people_model->get_study2($id);
-        $data['accolades'] = $this->people_model->get_accolades($id);
-        $data['inst'] = $this->people_model->get_institution($id); 
-		$data['content']='front/meet_staff_inner';		
-		$this->load->view('front/includes/template',$data);
-    }
 	
 	
 }
