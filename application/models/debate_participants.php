@@ -29,4 +29,6 @@ class  Debate_participants extends CI_Model
 		return $query->result();
 		
 	}
+	
+	
 }
