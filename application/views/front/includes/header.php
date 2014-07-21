@@ -94,12 +94,12 @@
             </div>
             <div class="mainmenu">
                 <li class="thirteen"><a href="index.html" class="current">Home</a></li>
-                <li class="thirteen"><a href="about-us.html">About Us </a></li>
+                <li class="thirteen"><a href="<?php echo base_url(); ?>index.php/front/about_kwtrp">About Us </a></li>
                 <li class="thirteen"><a href="competitions.html">Competitions</a></li>
                 <li class="thirteen"><a href="ask-a-scientist.html">Ask A Scientist</a></li>
                 <li class="twenty"><a href="science-education-resources.html">Science Education Resources</a></li>
                 <li class="thirteen"><a href="whats-up.html">Whats Up</a></li>
-                <li class="thirteen"><a href="careers.html">Careers</a></li>
+                <li class="thirteen"><a href="<?php echo base_url(); ?>index.php/front/health_research_careers">Careers</a></li>
             </div>
       </ul>
     <a href="#" id="pull">Menu</a>
